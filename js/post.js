@@ -3,12 +3,15 @@ $(function() {
 
     window.disqus_shortname = 'piccus'; // required: replace example with your forum shortname
     $('#disqus_container .comment').on('click',function(){
-        $(this).html('加载中...');
-        var that = this;
-        $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
+       var d = document, s = d.createElement('script');
+        
+        s.src = '//piccus.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     });
 
-    $('.entry a').each(function(index,element){
+    $('.entry 8a').each(function(index,element){
         var href = $(this).attr('href');
         if(href){
             if(href.indexOf('#') == 0){
