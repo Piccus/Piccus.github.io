@@ -39,7 +39,7 @@ category: blog
 	/usr/local/python3/bin/python3 -V Python 3
 
 ## python3环境变量修改
-在/usr/bin中有python、python2、python2.7三个文件依次指向后者，我们将python备份(·sudo mv python python.bak·)，然后创建python3的软链接(·sudo ln -s /usr/local/python3/bin/python3 /usr/bin/python·)。这样默认的python版本就替换为python3了。
+在/usr/bin中有python、python2、python2.7三个文件依次指向后者，我们将python备份(`sudo mv python python.bak`)，然后创建python3的软链接(`sudo ln -s /usr/local/python3/bin/python3 /usr/bin/python`)。这样默认的python版本就替换为python3了。
 
-因为yum使用python2，因此替换为python3后可能无法正常工作，因此修改yum配置文件(·sudo vi /usr/bin/yum·)。 
+因为yum使用python2，因此替换为python3后可能无法正常工作，因此修改yum配置文件(`sudo vi /usr/bin/yum`)。 
 将第一行指定的python版本改为python2.7(#!/usr/bin/python 改为 #!/usr/bin/python2.7)
