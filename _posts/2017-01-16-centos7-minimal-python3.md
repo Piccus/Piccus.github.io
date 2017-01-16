@@ -1,8 +1,7 @@
 ---
 layout: post
 title: centos7-minimal python3环境配置
-description: 
-在centos7-minimal下的python3环境配置、python3安装
+description: 在centos7-minimal下的python3环境配置、python3安装
 category: blog
 ---
 
