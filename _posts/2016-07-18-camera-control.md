@@ -104,7 +104,8 @@ category: blog
 
 `cvCreateVideoWriter()`就是创建一个输出流，将视频保存在`path`地址，`CV_FOURCC('P','I','M','1')`则用来表示保存格式，'P','I','M','1'指mpg格式。在循环里把每一个帧都通过`cvWriteFrame(writer, frame)`写入文件。当然在最后记得释放这个输出流，使用`cvReleaseVideoWriter(&writer)`即可。
 
-##视频回滚功能的实现
+## 视频回滚功能的实现
+在每次程序启动的时候，判断所有视频文件的创建时间是否大于视频回滚时间间隔，进而将满足条件的视频文件删除即可。
 
 
 [opencv]: http://opencv.org/ "opencv"
