@@ -43,3 +43,6 @@ category: blog
 
 因为yum使用python2，因此替换为python3后可能无法正常工作，因此修改yum配置文件(`sudo vi /usr/bin/yum`)。 
 将第一行指定的python版本改为python2.7(#!/usr/bin/python 改为 #!/usr/bin/python2.7)
+
+CentOS 6只要修改/usr/bin/yum
+CentOS 7需要同时修改/usr/bin/yum以及/usr/libexec/urlgrabber-ext-down同样的Python版本
